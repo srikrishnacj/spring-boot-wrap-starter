@@ -9,7 +9,6 @@ public class AnnotationUtil {
     public static String findPackageNameForClassWithAnnotation(Class cls) {
         try (ScanResult scanResult =
                      new ClassGraph()
-                             .verbose()               // Log to stderr
                              .enableAllInfo()         // Scan classes, methods, fields, annotations
                              .acceptPackages("")     // Scan com.xyz and subpackages (omit to scan all packages)
                              .scan()) {               // Start the scan

@@ -12,6 +12,7 @@ server:
   servlet:
     context-path: /
 
+
 # Application Debug & Logging
 wrap-rest-config:
   response:
@@ -25,3 +26,14 @@ wrap-rest-config:
     enableErrorCodesCtrl: true
   swagger:
     basePackage: in.cjcj
+
+
+# Cache Config
+caching:
+  enable: false
+  configs:
+    cache-name:
+      eviction: MAXIMUM_SIZE
+      maximumSize: 1
+      expireAfterAccess: 1
+      expireAfterWrite: 1
