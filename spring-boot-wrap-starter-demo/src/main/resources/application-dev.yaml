@@ -1,0 +1,11 @@
+# Application Debug & Logging
+wrap-rest-config:
+  response:
+    includeDebugInfo: true
+    enableGlobalCors: true
+  logging:
+    servlet:
+      request: BASIC, QUERY_PARAMS, HEADER, BODY
+      response: BASIC, QUERY_PARAMS, HEADER, BODY
+  controller:
+    enableErrorCodesCtrl: true

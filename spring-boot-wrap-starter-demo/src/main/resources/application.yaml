@@ -1,0 +1,10 @@
+#spring:
+#  application:
+#    name: \${info.app.name}
+#
+#server:
+#  servlet:
+#    context-path: /
+#  port: '8080'
+#
+#debug: \${debug.logging.springWebDebug}
