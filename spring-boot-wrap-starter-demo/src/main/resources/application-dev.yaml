@@ -48,8 +48,19 @@ resource-server:
   authorityMapping:
     name: prefix
   whitelistUrls:
+    - "**"
     - "**/swagger-resources/**"
     - "/swagger-ui.html"
     - "/v2/api-docs"
     - "/v3/api-docs"
     - "/webjars/**"
+
+
+# OAuth2 Rest Template Configuration
+resource-client:
+  registrations:
+    github:
+      clientId: test
+      clientSecret: test
+      scope: scope
+      tokenUri: tokenUri
