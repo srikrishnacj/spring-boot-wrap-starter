@@ -1,92 +1,58 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-      
-  <modelVersion>4.0.0</modelVersion>
-      
-  <groupId>in.cjcj.sboa</groupId>
-      
-  <artifactId>spring-boot-wrap-starter</artifactId>
-      
-  <version>1.0-SNAPSHOT</version>
-      
-  <packaging>pom</packaging>
-      
-  <name>spring-boot-wrap-starter</name>
-      
-  <properties>
-            
-    <java.version>11</java.version>
-            
-    <spring-cloud.version>2020.0.4</spring-cloud.version>
-            
-    <spring-boot-dependencies>2.5.6</spring-boot-dependencies>
-        
-  </properties>
-      
-  <modules>
-            
-    <module>spring-boot-wrap-starter-rest</module>
-            
-    <module>spring-boot-wrap-starter-cache</module>
-            
-    <module>spring-boot-wrap-starter-resource-server</module>
-            
-    <module>spring-boot-wrap-starter-resource-client</module>
-            
-    <module>spring-boot-wrap-starter-test</module>
-            
-    <module>spring-boot-wrap-starter-demo</module>
-          
-    <module>spring-boot-wrap-starter-commons</module>
-      
-  </modules>
-      
-  <dependencies>
-            
-    <dependency>
-                  
-      <groupId>org.apache.commons</groupId>
-                  
-      <artifactId>commons-lang3</artifactId>
-              
-    </dependency>
-        
-  </dependencies>
-      
-  <dependencyManagement>
-            
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>in.cjcj.sboa</groupId>
+    <artifactId>spring-boot-wrap-starter</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>spring-boot-wrap-starter</name>
+    <properties>
+        <java.version>11</java.version>
+        <spring-cloud.version>2020.0.4</spring-cloud.version>
+        <spring-boot-dependencies>2.5.6</spring-boot-dependencies>
+    </properties>
+
+    <modules>
+        <module>spring-boot-wrap-starter-rest</module>
+        <module>spring-boot-wrap-starter-cache</module>
+        <module>spring-boot-wrap-starter-resource-server</module>
+        <module>spring-boot-wrap-starter-resource-client</module>
+        <module>spring-boot-wrap-starter-test</module>
+        <module>spring-boot-wrap-starter-demo</module>
+        <module>spring-boot-wrap-starter-commons</module>
+    </modules>
+
     <dependencies>
-                  
-      <dependency>
-                        
-        <groupId>org.springframework.cloud</groupId>
-                        
-        <artifactId>spring-cloud-dependencies</artifactId>
-                        
-        <version>${spring-cloud.version}</version>
-                        
-        <type>pom</type>
-                        
-        <scope>import</scope>
-                    
-      </dependency>
-                  
-      <dependency>
-                        
-        <groupId>org.springframework.boot</groupId>
-                        
-        <artifactId>spring-boot-dependencies</artifactId>
-                        
-        <version>${spring-boot-dependencies}</version>
-                        
-        <type>pom</type>
-                        
-        <scope>import</scope>
-                    
-      </dependency>
-              
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+        </dependency>
     </dependencies>
-        
-  </dependencyManagement>
-  
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot-dependencies}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 </project>

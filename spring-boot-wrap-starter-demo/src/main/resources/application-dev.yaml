@@ -1,3 +1,17 @@
+# Application Info
+info:
+  app:
+    name: test
+    description: test
+    version: 1.0.0
+
+
+# Server Config
+server:
+  port: 8080
+  servlet:
+    context-path: /
+
 # Application Debug & Logging
 wrap-rest-config:
   response:
@@ -9,3 +23,5 @@ wrap-rest-config:
       response: BASIC, QUERY_PARAMS, HEADER, BODY
   controller:
     enableErrorCodesCtrl: true
+  swagger:
+    basePackage: in.cjcj

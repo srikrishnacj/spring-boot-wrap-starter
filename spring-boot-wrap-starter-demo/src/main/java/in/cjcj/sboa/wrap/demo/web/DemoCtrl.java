@@ -1,6 +1,5 @@
 package in.cjcj.sboa.wrap.demo.web;
 
-import in.cjcj.sboa.wrap.rest.errors.AppErrors;
 import in.cjcj.sboa.wrap.rest.errors.ErrorBuilder;
 import in.cjcj.sboa.wrap.rest.errors.codes.CommonResourceErrorCode;
 import in.cjcj.sboa.wrap.rest.exception.AppException;
@@ -41,7 +40,10 @@ public class DemoCtrl {
     @GetMapping("/demo/error/multi")
     public ResponseEntity errorMulti() {
         CommonResourceErrorCode entityOverrideError = CommonResourceErrorCode.ENTITY_OVERRIDE_ERROR;
-        ErrorBuilder errorBuilder = ErrorBuilder.withError(CommonResourceErrorCode.VALIDATION_ERROR).subError(CommonResourceErrorCode.ENTITY_OVERRIDE_ERROR);
+        ErrorBuilder errorBuilder = ErrorBuilder
+                .withError(CommonResourceErrorCode.VALIDATION_ERROR)
+                .subError(CommonResourceErrorCode.ENTITY_OVERRIDE_ERROR);
         throw new AppException(errorBuilder);
     }
+
 }

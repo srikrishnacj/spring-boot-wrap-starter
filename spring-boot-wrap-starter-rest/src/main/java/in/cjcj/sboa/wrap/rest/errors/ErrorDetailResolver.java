@@ -20,7 +20,7 @@ public class ErrorDetailResolver {
 
     static {
         errorDetails = new HashMap<>();
-
+        loadAllErrorDetails();
     }
 
     private static void loadAllErrorDetails() {
