@@ -37,3 +37,19 @@ caching:
       maximumSize: 1
       expireAfterAccess: 1
       expireAfterWrite: 1
+
+
+# OAuth2 Resource Server Configuration
+resource-server:
+  enable: true
+  issuer-uri: "https://login.microsoftonline.com/274e7bcc-09e1-4464-8187-eb991bfcf27e/v2.0"
+  verify-claims:
+    name: value
+  authorityMapping:
+    name: prefix
+  whitelistUrls:
+    - "**/swagger-resources/**"
+    - "/swagger-ui.html"
+    - "/v2/api-docs"
+    - "/v3/api-docs"
+    - "/webjars/**"
