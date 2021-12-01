@@ -13,6 +13,10 @@
     <java.version>11</java.version>
     <spring-cloud.version>2020.0.4</spring-cloud.version>
     <spring-boot-dependencies>2.5.6</spring-boot-dependencies>
+
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>11</maven.compiler.source>
+    <maven.compiler.target>11</maven.compiler.target>
   </properties>
       
   <modules>
@@ -23,14 +27,12 @@
     <module>spring-boot-wrap-starter-resource-client</module>
     <module>spring-boot-wrap-starter-test</module>
     <module>spring-boot-wrap-starter-bom</module>
-    <module>spring-boot-wrap-starter-demo</module>
   </modules>
       
   <dependencies>
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
-      <optional>true</optional>
     </dependency>
             
     <dependency>
@@ -58,4 +60,38 @@
       </dependency>
     </dependencies>
   </dependencyManagement>
+
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-resources-plugin</artifactId>
+        <version>3.0.1</version>
+        <executions>
+          <execution>
+            <id>copy-resources</id>
+            <phase>validate</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <resources>
+                <resource>
+                  <directory>./</directory>
+                  <filtering>true</filtering>
+                </resource>
+              </resources>
+              <outputDirectory>target</outputDirectory>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-install-plugin</artifactId>
+        <configuration>
+          <pomFile>target/pom.xml</pomFile>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>

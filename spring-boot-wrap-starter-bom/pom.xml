@@ -10,7 +10,7 @@
 
     <groupId>in.cjcj.sboa</groupId>
     <artifactId>spring-boot-wrap-starter-bom</artifactId>
-    <version>${revision}</version>
+    <packaging>pom</packaging>
 
     <name>spring-boot-wrap-starter-bom</name>
 
@@ -19,32 +19,32 @@
             <dependency>
                 <groupId>in.cjcj.sboa</groupId>
                 <artifactId>spring-boot-wrap-starter-rest</artifactId>
-                <version>${revision}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>in.cjcj.sboa</groupId>
                 <artifactId>spring-boot-wrap-starter-commons</artifactId>
-                <version>${revision}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>in.cjcj.sboa</groupId>
                 <artifactId>spring-boot-wrap-starter-cache</artifactId>
-                <version>${revision}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>in.cjcj.sboa</groupId>
                 <artifactId>spring-boot-wrap-starter-resource-server</artifactId>
-                <version>${revision}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>in.cjcj.sboa</groupId>
                 <artifactId>spring-boot-wrap-starter-resource-client</artifactId>
-                <version>${revision}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>in.cjcj.sboa</groupId>
                 <artifactId>spring-boot-wrap-starter-test</artifactId>
-                <version>${revision}</version>
+                <version>${project.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

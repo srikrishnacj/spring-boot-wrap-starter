@@ -10,7 +10,6 @@
 
     <groupId>in.cjcj.sboa</groupId>
     <artifactId>spring-boot-wrap-starter-resource-client</artifactId>
-    <version>${revision}</version>
 
     <name>spring-boot-wrap-starter-resource-client</name>
 

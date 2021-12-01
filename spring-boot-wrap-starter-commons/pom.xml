@@ -10,7 +10,6 @@
 
     <groupId>in.cjcj.sboa</groupId>
     <artifactId>spring-boot-wrap-starter-commons</artifactId>
-    <version>${revision}</version>
 
     <name>spring-boot-wrap-starter-commons</name>
 
