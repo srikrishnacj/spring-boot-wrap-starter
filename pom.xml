@@ -4,10 +4,13 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>in.cjcj.sboa</groupId>
     <artifactId>spring-boot-wrap-starter</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>${revision}</version>
     <packaging>pom</packaging>
     <name>spring-boot-wrap-starter</name>
+
+
     <properties>
+        <revision>1.0.0</revision>
         <java.version>11</java.version>
         <spring-cloud.version>2020.0.4</spring-cloud.version>
         <spring-boot-dependencies>2.5.6</spring-boot-dependencies>
@@ -15,12 +18,12 @@
 
     <modules>
         <module>spring-boot-wrap-starter-rest</module>
+        <module>spring-boot-wrap-starter-commons</module>
         <module>spring-boot-wrap-starter-cache</module>
         <module>spring-boot-wrap-starter-resource-server</module>
         <module>spring-boot-wrap-starter-resource-client</module>
         <module>spring-boot-wrap-starter-test</module>
         <module>spring-boot-wrap-starter-demo</module>
-        <module>spring-boot-wrap-starter-commons</module>
     </modules>
 
     <dependencies>
@@ -29,7 +32,6 @@
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
-
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>

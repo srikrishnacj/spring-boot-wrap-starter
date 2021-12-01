@@ -5,12 +5,12 @@
     <parent>
         <artifactId>spring-boot-wrap-starter</artifactId>
         <groupId>in.cjcj.sboa</groupId>
-        <version>1.0-SNAPSHOT</version>
+        <version>${revision}</version>
     </parent>
 
     <groupId>in.cjcj.sboa</groupId>
     <artifactId>spring-boot-wrap-starter-resource-server</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>${revision}</version>
 
     <name>spring-boot-wrap-starter-resource-server</name>
 
