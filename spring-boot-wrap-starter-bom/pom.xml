@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>spring-boot-wrap-starter</artifactId>
+        <groupId>in.cjcj.sboa</groupId>
+        <version>${revision}</version>
+    </parent>
+
+    <groupId>in.cjcj.sboa</groupId>
+    <artifactId>spring-boot-wrap-starter-bom</artifactId>
+    <version>${revision}</version>
+
+    <name>spring-boot-wrap-starter-bom</name>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>in.cjcj.sboa</groupId>
+                <artifactId>spring-boot-wrap-starter-rest</artifactId>
+                <version>${revision}</version>
+            </dependency>
+            <dependency>
+                <groupId>in.cjcj.sboa</groupId>
+                <artifactId>spring-boot-wrap-starter-commons</artifactId>
+                <version>${revision}</version>
+            </dependency>
+            <dependency>
+                <groupId>in.cjcj.sboa</groupId>
+                <artifactId>spring-boot-wrap-starter-cache</artifactId>
+                <version>${revision}</version>
+            </dependency>
+            <dependency>
+                <groupId>in.cjcj.sboa</groupId>
+                <artifactId>spring-boot-wrap-starter-resource-server</artifactId>
+                <version>${revision}</version>
+            </dependency>
+            <dependency>
+                <groupId>in.cjcj.sboa</groupId>
+                <artifactId>spring-boot-wrap-starter-resource-client</artifactId>
+                <version>${revision}</version>
+            </dependency>
+            <dependency>
+                <groupId>in.cjcj.sboa</groupId>
+                <artifactId>spring-boot-wrap-starter-test</artifactId>
+                <version>${revision}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>
