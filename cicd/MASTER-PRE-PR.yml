@@ -1,0 +1,58 @@
+trigger: none
+
+pr:
+  - master
+
+pool:
+  name: Self Hosted Pool
+
+variables:
+  - group: maven-server-config
+
+steps:
+  - task: Maven@3
+    displayName: PreDownload Dependencies
+    inputs:
+      publishJUnitResults: false
+      javaHomeOption: 'JDKVersion'
+      jdkVersionOption: '11'
+      jdkArchitectureOption: 'x64'
+      goals: 'dependency:resolve'
+
+  - task: Maven@3
+    displayName: Compile
+    inputs:
+      publishJUnitResults: false
+      javaHomeOption: 'JDKVersion'
+      jdkVersionOption: '11'
+      jdkArchitectureOption: 'x64'
+      goals: 'compile'
+
+  - task: Maven@3
+    displayName: Unit Tests
+    inputs:
+      publishJUnitResults: false
+      javaHomeOption: 'JDKVersion'
+      jdkVersionOption: '11'
+      jdkArchitectureOption: 'x64'
+      goals: 'test'
+
+  - task: Maven@3
+    displayName: Package
+    inputs:
+      publishJUnitResults: false
+      javaHomeOption: 'JDKVersion'
+      jdkVersionOption: '11'
+      jdkArchitectureOption: 'x64'
+      goals: 'package -DskipTests=true'
+
+#  - task: Gradle@2
+#    displayName: Uniq Version Check
+#    inputs:
+#      workingDirectory: ''
+#      gradleWrapperFile: 'gradlew'
+#      gradleOptions: '-Xmx3072m'
+#      javaHomeOption: 'JDKVersion'
+#      jdkVersionOption: '11'
+#      jdkArchitectureOption: 'x64'
+#      tasks: 'lookForArtifacts'
